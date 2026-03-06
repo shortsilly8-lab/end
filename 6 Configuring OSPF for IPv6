@@ -134,3 +134,16 @@ Step 6: Enable IPv6 routing and CEF.
           R1# show ipv6 route
           R2# show ipv6 route
           R3# show ipv6 route
+
+6️⃣ Practical 6 — OSPF IPv6
+Enable IPv6
+ipv6 unicast-routing
+ipv6 cef
+OSPFv3
+interface serial0/0/0
+ipv6 ospf 1 area 0
+Verify
+show ipv6 ospf neighbor
+show ipv6 route
+show ipv6 interface brief
+
