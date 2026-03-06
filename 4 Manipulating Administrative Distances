@@ -196,3 +196,14 @@ Step 7: Modify distance based on an access list.
           R3# show ip route
 
 
+4️⃣ Practical 4 — Administrative Distance
+Change Distance
+router rip
+distance 100
+Change based on source
+router ospf 1
+distance 85 192.168.100.0 0.0.3.255
+Verify
+show ip route
+show ip protocols
+
