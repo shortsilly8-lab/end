@@ -139,3 +139,25 @@ Step 10: Configure the Gateway router Fast Ethernet interface for VLAN trunking.
           Gateway# show interfaces description
           Gateway# show vlans
 
+
+8️⃣ Practical 8 — Inter-VLAN Routing
+Router
+interface fa0/0.100
+encapsulation dot1q 100
+ip address 172.16.100.1 255.255.255.0
+
+interface fa0/0.200
+encapsulation dot1q 200
+ip address 172.16.200.1 255.255.255.0
+Switch
+vlan 100
+name Payroll
+
+vlan 200
+name Engineering
+Verify
+show vlan brief
+show ip interface brief
+show interfaces trunk
+
+
