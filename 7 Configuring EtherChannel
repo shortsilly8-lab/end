@@ -84,5 +84,18 @@ Step 6: Configure load balancing.
           IPv4: Source XOR Destination MAC address
           IPv6: Source XOR Destination IP address
 
+7️⃣ Practical 7 — EtherChannel
+PAgP
+interface range fa0/11 - 12
+channel-group 1 mode desirable
+LACP
+interface range fa0/7 - 8
+channel-group 2 mode active
+Verify
+show etherchannel summary
+show interfaces trunk
+show spanning-tree
+
+
 
 
