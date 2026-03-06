@@ -177,3 +177,26 @@ Step 9: Redistribute between two routing protocols.
           R2(config-router)# redistribute rip subnets
           R3# show ip route ospf
 
+
+3️⃣ Practical 3 — RIP to OSPF Redistribution
+RIP Configuration
+router rip
+version 2
+no auto-summary
+network 172.16.0.0
+OSPF Configuration
+router ospf 1
+network 172.16.23.0 0.0.0.255 area 0
+Redistribution
+router rip
+redistribute ospf 1 metric 4
+
+router ospf 1
+redistribute rip subnets
+Verify
+show ip route
+show ip route rip
+show ip route ospf
+show ip protocols
+show ip rip database
+
