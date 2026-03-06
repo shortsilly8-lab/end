@@ -11,7 +11,6 @@ Objectives
 • Change interface priorities.
 
 Step 1: Configure addressing and loopbacks.
-
           R1
           R1# configure terminal
           R1(config)# interface Loopback1
@@ -29,7 +28,6 @@ Step 1: Configure addressing and loopbacks.
           R1(config-if)# clock rate 64000 
           R1(configif)# bandwidth 64 
           R1(config-if)# no shutdown
-          
           
           R2
           R2# configure terminal
