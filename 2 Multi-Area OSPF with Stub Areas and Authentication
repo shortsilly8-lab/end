@@ -107,3 +107,26 @@ Step 5: Configure OSPF interface authentication.
           R2(config-if)# ip ospf message-digest-key 1 md5 cisco
 
 
+2️⃣ Practical 2 — Multi Area OSPF
+Configuration
+R1(config)#router ospf 1
+network 10.1.12.0 0.0.0.255 area 0
+
+R2(config)#router ospf 1
+network 10.1.12.0 0.0.0.255 area 0
+network 10.1.23.0 0.0.0.255 area 23
+
+R3(config)#router ospf 1
+network 10.1.23.0 0.0.0.255 area 23
+Stub Area
+R2(config-router)#area 23 stub
+R3(config-router)#area 23 stub
+Authentication
+interface serial0/0/1
+ip ospf authentication
+ip ospf authentication-key cisco
+Verify
+show ip ospf neighbor
+show ip ospf database
+show ip route
+
