@@ -123,6 +123,21 @@ Step 7: Configure primary and backup routes using a default network and a static
           ITA# show ip route
 
 
+5️⃣ Practical 5 — BGP
+ISP Router
+router bgp 200
+neighbor 10.0.0.2 remote-as 100
+network 10.1.1.0 mask 255.255.255.0
+ITA Router
+router bgp 100
+neighbor 10.0.0.1 remote-as 200
+neighbor 172.16.0.1 remote-as 300
+network 192.168.0.0
+network 192.168.1.0
+Verify
+show ip bgp
+show ip bgp neighbors
+show ip route
 
 
 
