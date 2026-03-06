@@ -143,3 +143,19 @@ Step 6: Modify interface priorities to control the DR and BDR election.
           R1
           R1# show ip ospf neighbor detail
 
+
+How to see output : 
+1️⃣ Practical 1 — Single Area OSPF
+Configuration
+R1(config)#router ospf 1
+R1(config-router)#network 10.1.100.0 0.0.0.255 area 0
+R1(config-router)#network 10.1.200.0 0.0.0.255 area 0
+R1(config-router)#network 10.1.1.0 0.0.0.255 area 0
+Verify CLI Output
+show ip protocols
+show ip ospf
+show ip ospf neighbor
+show ip ospf interface brief
+show ip route
+show ip ospf database
+
