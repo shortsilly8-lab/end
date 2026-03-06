@@ -15,7 +15,7 @@ Step 2: Configuring the hostname and loopback interfaces.
 
           Router(config)# hostname R1
           R1(config)# interface loopback0
-          R1(config-if)# ip address 10.1.1.1 255.255.255.0 \
+          R1(config-if)# ip address 10.1.1.1 255.255.255.0 
           R1(config-if)# ipv6 address FEC0::1:1/112
           
           Router(config)# hostname R2
