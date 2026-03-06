@@ -78,3 +78,16 @@ Step 6: Change root port using the spanning-tree cost command.
           ALS2(config-if-range)# spanning-tree cost 10
           ALS2# show spanning-tree
 
+
+9️⃣ Practical 9 — Spanning Tree
+Primary Root
+spanning-tree vlan 1 root primary
+Secondary Root
+spanning-tree vlan 1 root secondary
+Portfast
+interface fa0/6
+spanning-tree portfast
+Verify
+show spanning-tree
+show interfaces trunk
+
